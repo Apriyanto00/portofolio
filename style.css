@@ -270,3 +270,61 @@ img {
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
+/* === RESPONSIVE MOBILE LAYOUT === */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .about .container,
+  .team-grid,
+  .project-grid,
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .project-card,
+  .member,
+  .bio-img,
+  .about-img img {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .project-card img,
+  .member img {
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .bio-img {
+    width: 150px;
+  }
+
+  .about-text {
+    padding: 20px;
+  }
+}

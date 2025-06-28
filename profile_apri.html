@@ -8,24 +8,15 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>AWA Creative Team</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="website.html">Website</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Header otomatis -->
+  <div id="header"></div>
 
   <!-- Bio Apri -->
   <section class="bio">
     <div class="container">
       <h2>Apri Yanto</h2>
       <img src="images/apri.jpg" alt="Apri" class="bio-img" style="width: 150px; height: auto; border-radius: 10px;">
+      
       <p><strong>INTRODUCTION</strong></p>
       <p>
         Hello, my name is Apriyanto. I graduated from SMK Ma'arif NU 1 Ajibarang in 2017 with an engineering education background.
@@ -36,7 +27,6 @@
         Now I work at PT. Honda Arista Depok and have been working there for 4 years. I started registering for college in 2022 to develop insight and increase knowledge. I chose Informatics Engineering because today's cars have advanced in features such as interior, exterior, and engine, and are now growing rapidly from Hybrid systems into Electric Vehicles (EV). That is the reason I chose Informatics Engineering.
       </p>
 
-      <!-- Tombol & Terjemahan -->
       <button onclick="toggleTranslate()" style="margin-top: 15px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
         Tampilkan Terjemahan Bahasa Indonesia
       </button>
@@ -53,29 +43,36 @@
       </div>
 
       <p style="margin-top: 20px;">Jika ingin mengenal lebih dalam, silakan klik sosial media saya:</p>
-      <div class="sosmed">
+      <div class="sosmed" style="margin-top: 10px;">
         <a href="https://instagram.com/aprii_yto/" target="_blank">
-          <img src="images/instagram.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: contain;">
+          <img src="images/instagram.png" alt="Instagram" class="icon">
         </a>
         <a href="https://facebook.com/apri.dangerlinejava" target="_blank">
-          <img src="images/facebook.png" alt="Facebook" style="width: 30px; height: 30px; object-fit: contain;">
+          <img src="images/facebook.png" alt="Facebook" class="icon">
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AWA Team. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Footer otomatis -->
+  <div id="footer"></div>
 
+  <!-- Script header/footer dan toggle translate -->
   <script>
+    // Toggle terjemahan
     function toggleTranslate() {
       const x = document.getElementById("translation");
       x.style.display = x.style.display === "none" ? "block" : "none";
     }
+
+    // Load header & footer otomatis
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 
 </body>

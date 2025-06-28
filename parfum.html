@@ -8,43 +8,29 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>AWA Creative Team</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="website.html">Website</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Header otomatis -->
+  <div id="header"></div>
 
-  <!-- Slideshow -->
+  <!-- Slideshow Section -->
   <section class="bio" style="text-align: center;">
     <h2>Produk AWA</h2>
     <div class="slideshow-container">
       <div class="slide fade">
-        <img src="images/parfume.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+        <img src="images/parfume.jpg" alt="Parfum AWA" style="width: 250px; height: auto; border-radius: 20px;">
       </div>
       <div class="slide fade">
-        <img src="images/tumbler.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+        <img src="images/parfume2.jpg" alt="Tumbler AWA" style="width: 250px; height: auto; border-radius: 20px;">
       </div>
       <div class="slide fade">
-        <img src="images/kaos.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+        <img src="images/parfume3.jpg" alt="Kaos AWA" style="width: 250px; height: auto; border-radius: 20px;">
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AWA Team. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Footer otomatis -->
+  <div id="footer"></div>
 
-  <!-- JS -->
+  <!-- Slideshow Script -->
   <script>
     let slideIndex = 0;
     showSlides();
@@ -59,6 +45,17 @@
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 2500); // Ganti slide setiap 2.5 detik
     }
+  </script>
+
+  <!-- Load Header & Footer -->
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 
 </body>

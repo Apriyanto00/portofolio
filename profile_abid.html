@@ -8,24 +8,15 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>AWA Creative Team</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="website.html">Website</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Header otomatis -->
+  <div id="header"></div>
 
   <!-- Bio Abid -->
   <section class="bio">
     <div class="container">
       <h2>Abid Faturrahman</h2>
       <img src="images/abid.jpg" alt="Abid" class="bio-img" style="width: 150px; height: auto; border-radius: 10px;">
+      
       <p><strong>INTRODUCTION</strong></p>
       <p>
         Hi, I'm Abid Faturrahman. A Property Sales Consultant, Construction Field Staff, and entrepreneur who believes that hard work, consistency, and the courage to try are the keys to change.
@@ -59,29 +50,34 @@
       </div>
 
       <p style="margin-top: 20px;">Jika ingin mengenal lebih dalam, silakan klik sosial media saya:</p>
-      <div class="sosmed">
+      <div class="sosmed" style="margin-top: 10px;">
         <a href="https://instagram.com/abidfaturrahman/" target="_blank">
-          <img src="images/instagram.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: contain;">
+          <img src="images/instagram.png" alt="Instagram" class="icon">
         </a>
         <a href="https://facebook.com/" target="_blank">
-          <img src="images/facebook.png" alt="Facebook" style="width: 30px; height: 30px; object-fit: contain;">
+          <img src="images/facebook.png" alt="Facebook" class="icon">
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AWA Team. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Footer otomatis -->
+  <div id="footer"></div>
 
+  <!-- Script header/footer dan toggle translate -->
   <script>
     function toggleTranslate() {
       const x = document.getElementById("translation");
       x.style.display = x.style.display === "none" ? "block" : "none";
     }
+
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 
 </body>

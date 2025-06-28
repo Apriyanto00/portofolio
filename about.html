@@ -7,42 +7,41 @@
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1>AWA Creative Team</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="website.html">Website</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header otomatis -->
+  <div id="header"></div>
 
-<section class="bio">
-  <div class="container">
-    <img src="images/tim.jpg" alt="Abid" class="bio-img" style="width: 250px; height: auto; border-radius: 10px;">
+  <!-- About Section -->
+  <section class="bio">
+    <div class="container">
+      <img src="images/tim.jpg" alt="Tim AWA" class="bio-img" style="width: 250px; height: auto; border-radius: 10px;">
+      <h2>About Us</h2>
+      <p>
+        Kami adalah tim mahasiswa yang penuh semangat dan bergerak dengan semangat inovasi, kreativitas, dan kolaborasi.
+        Kami berfokus pada pengembangan software, desain, dan analisis data, serta menciptakan proyek-proyek bermakna untuk kebutuhan tugas akademik, klien, dan portofolio pribadi.
+      </p>
+      <p>
+        Kami percaya bahwa setiap baris kode, setiap elemen visual, dan setiap temuan data memiliki kekuatan untuk menyelesaikan masalah nyata dan menyampaikan cerita yang berdampak.
+        Melalui pengalaman langsung dan pembelajaran berkelanjutan, kami mengubah ide menjadi solusi digital—fungsional, estetis, dan bernilai.
+      </p>
+      <p>
+        Mari berkembang dan berkarya bersama.
+      </p>
+    </div>
+  </section>
 
-    <h2>About Us</h2>
-    <p>
-      Kami adalah tim mahasiswa yang penuh semangat dan bergerak dengan semangat inovasi, kreativitas, dan kolaborasi.
-      Kami berfokus pada pengembangan software, desain, dan analisis data, serta menciptakan proyek-proyek bermakna untuk kebutuhan tugas akademik, klien, dan portofolio pribadi.
-    </p>
-    <p>
-      Kami percaya bahwa setiap baris kode, setiap elemen visual, dan setiap temuan data memiliki kekuatan untuk menyelesaikan masalah nyata dan menyampaikan cerita yang berdampak.
-      Melalui pengalaman langsung dan pembelajaran berkelanjutan, kami mengubah ide menjadi solusi digital—fungsional, estetis, dan bernilai.
-    </p>
-    <p>
-      Mari berkembang dan berkarya bersama.
-    </p>
-  </div>
-</section>
+  <!-- Footer otomatis -->
+  <div id="footer"></div>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 AWA Team. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Script untuk memuat header & footer -->
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 
 </body>
 </html>

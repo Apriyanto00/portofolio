@@ -1,29 +1,65 @@
-<?php include 'header.php'; ?>
-<section class="bio">
-  <div class="container">
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slideshow Gambar</title>
+  <title>Produk AWA - Slideshow</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="slideshow-container">
-  <div class="slide fade">
-    <img src="images/parfume.jpg" style="width: 250px; height: auto; border-radius: 20px;">
-  </div>
-  <div class="slide fade">
-    <img src="images/tumbler.jpg" style="width: 250px; height: auto; border-radius: 20px;">
-  </div>
-  <div class="slide fade">
-    <img src="images/kaos.jpg" style="width: 250px; height: auto; border-radius: 20px;">
-  </div>
-</div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>AWA Creative Team</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="website.html">Website</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-<script src="script.js"></script>
+  <!-- Slideshow -->
+  <section class="bio" style="text-align: center;">
+    <h2>Produk AWA</h2>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/parfume.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+      </div>
+      <div class="slide fade">
+        <img src="images/tumbler.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+      </div>
+      <div class="slide fade">
+        <img src="images/kaos.jpg" style="width: 250px; height: auto; border-radius: 20px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AWA Team. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2500); // Ganti slide setiap 2.5 detik
+    }
+  </script>
+
 </body>
 </html>
-

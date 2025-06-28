@@ -1,38 +1,77 @@
-<?php include 'header.php'; ?>
-<section class="projects" id="projects">
-  <div class="container">
-    <h4>// AWA Project</h4>
-    <h2>Product Terbaik Kami</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All</button>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWA Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>AWA Creative Team</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="project-grid">
-      <div class="project-card branding">
-        <a href="tumbler.php">
-        <img src="images/tumbler.jpg" alt="Brand Identity" />
-        </a>
-        <h3>Tumbler Stainley AWA</h3>
-        <p>Product Botol Minum Stainley Tahan Dingin From AWA.</p>
-      </div>
+  <section class="projects" id="projects">
+    <div class="container">
+      <h4>// AWA Project</h4>
+      <h2>Product Terbaik Kami</h2>
       
-      <div class="project-card website">
-         <a href="kaos.php">
-        <img src="images/kaos.jpg" alt="Web Portofolio" />
-        </a>
-        <h3>T-shirt Polos AWA</h3>
-        <p>Website profil ini profesional menampilkan product T-shirt terbaik AWA.</p>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
       </div>
 
-      <div class="project-card multimedia">
-         <a href="parfum.php">
-        <img src="images/parfume1.jpg" alt="Music Project" />
-      </a>
-        <h3>Parfume ABCA </h3>
-        <p>Product parfume premium from AWA.</p>
-      </div>
+      <div class="project-grid">
+        <!-- Project 1: Tumbler -->
+        <div class="project-card branding">
+          <a href="tumbler.html">
+            <img src="images/tumbler.jpg" alt="Tumbler AWA" />
+          </a>
+          <h3>Tumbler Stainley AWA</h3>
+          <p>Product botol minum Stainley tahan dingin from AWA.</p>
+        </div>
 
-      <div class="project-card website">
-        <img src="images/whatsapp.png" alt="Web Sistem"style="width: 50px; height: 50px; object-fit: contain;">
-        <h3>if you want to order contact below:<h3>
-          <h3> 0858343723423 <h3>
+        <!-- Project 2: Kaos -->
+        <div class="project-card website">
+          <a href="kaos.html">
+            <img src="images/kaos.jpg" alt="Kaos AWA" />
+          </a>
+          <h3>T-shirt Polos AWA</h3>
+          <p>T-shirt minimalis bergaya modern, produk terbaik dari AWA.</p>
+        </div>
+
+        <!-- Project 3: Parfum -->
+        <div class="project-card multimedia">
+          <a href="parfum.html">
+            <img src="images/parfume1.jpg" alt="Parfum ABCA" />
+          </a>
+          <h3>Parfume ABCA</h3>
+          <p>Produk parfum premium dengan aroma khas dan elegan.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="project-card website">
+          <img src="images/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px; object-fit: contain;">
+          <h3>If you want to order, contact below:</h3>
+          <h3>0858-3437-23423</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AWA Team. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

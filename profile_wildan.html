@@ -1,58 +1,84 @@
-<?php include 'header.php'; ?>
-<section class="bio">
-  <div class="container">
-    <h2>Muhammad Wildan</h2>
-    <img src="images/wildan.jpg" alt="Wildan" class="bio-img" style="width: 150px; height: auto; border-radius: 10px;">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Muhammad Wildan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <p>INTRODUCTION</p>
-Hi, I'm Muhammad Wildan composer and songwriter who believes that music is the most honest way to tell stories.
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>AWA Creative Team</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="website.html">Website</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-I start making music from things that are close to me: anxieties, hopes, fears, and unfulfilled dreams. My music is heavily influenced by alternative rock, blues, and the raw, energetic sounds of the Rocket Flyers Group. But I also like to explore more serene, minimalist, or even experimental nuances.
+  <!-- Bio Section -->
+  <section class="bio">
+    <div class="container">
+      <h2>Muhammad Wildan</h2>
+      <img src="images/wildan.jpg" alt="Wildan" class="bio-img" style="width: 150px; height: auto; border-radius: 10px;">
 
-Currently, I'm actively creating songs for personal projects, short film scoring, and various forms of creative collaboration. For me, the most important thing is that the work feels real, not just pleasing to the ear, but also has flavor.
+      <p><strong>INTRODUCTION</strong></p>
+      <p>
+        Hi, I'm Muhammad Wildan — a composer and songwriter who believes that music is the most honest way to tell stories.
+        <br><br>
+        I start making music from things that are close to me: anxieties, hopes, fears, and unfulfilled dreams. My music is heavily influenced by alternative rock, blues, and the raw, energetic sounds of the Rocket Flyers Group. But I also like to explore more serene, minimalist, or even experimental nuances.
+        <br><br>
+        Currently, I'm actively creating songs for personal projects, short film scoring, and various forms of creative collaboration. For me, the most important thing is that the work feels real — not just pleasing to the ear, but also has flavor.
+        <br><br>
+        If you're interested in working together, or just want to chat about music, don't hesitate to contact me. Let’s create something honest and loud.
+      </p>
 
-If you're interested in working together, or just want to chat about music, don't hesitate to contact me.
-Let's create something honest and loud.
+      <!-- Tombol Terjemahan -->
+      <button onclick="toggleTranslate()" style="margin-top: 15px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Tampilkan Terjemahan Bahasa Indonesia
+      </button>
 
-<!-- Tombol terjemahan -->
-<button onclick="toggleTranslate()" style="margin-top: 15px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  Tampilkan Terjemahan Bahasa Indonesia
-</button>
-<!-- Paragraf terjemahan Bahasa Indonesia -->
-<div id="translation" style="display: none; margin-top: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 10px; line-height: 1.6;">
-Hai, saya Muhammad Wildan composer dan penulis lagu yang percaya bahwa musik adalah cara paling jujur untuk bercerita.
-
-Saya mulai membuat musik dari hal-hal yang dekat: keresahan, harapan, rasa takut, sampai mimpi yang belum kesampaian. Musik saya banyak dipengaruhi oleh rock alternatif, blues, dan suara-suara mentah penuh energi ala Kelompok Penerbang Roket. Tapi saya juga senang mengeksplorasi nuansa yang lebih syahdu, minimalis, atau bahkan eksperimental.
-
-Saat ini, saya aktif menciptakan lagu untuk proyek pribadi, scoring film pendek, dan berbagai bentuk kolaborasi kreatif. Bagi saya, yang paling penting adalah karya itu terasa nyata, bukan hanya enak didengar, tapi juga punya rasa.
-
-Kalau kamu tertarik bekerja sama, atau cuma mau ngobrol soal musik, jangan ragu buat hubungi saya.
-Let’s create something honest and loud.  
-</div>
-<script>
-  function toggleTranslate() {
-    var x = document.getElementById("translation");
-    x.style.display = x.style.display === "none" ? "block" : "none";
-  }
-</script>
-<p>jika ingin mengenal lebih dalam silahkan klik sosial media saya:</p>
-            <div class="sosmed"></div>
-            <a href="https://instagram.com/wildanmalicky/" target="_blank">
-  <img src="images/instagram.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: contain;">
-</a>
-
-<a href="https://facebook.com/" target="_blank">
-  <img src="images/facebook.png" alt="Facebook" style="width: 30px; height: 30px; object-fit: contain;">
-</a>
-
-
+      <!-- Isi Terjemahan -->
+      <div id="translation" style="display: none; margin-top: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 10px; line-height: 1.6;">
+        Hai, saya Muhammad Wildan — composer dan penulis lagu yang percaya bahwa musik adalah cara paling jujur untuk bercerita.
+        <br><br>
+        Saya mulai membuat musik dari hal-hal yang dekat: keresahan, harapan, rasa takut, hingga mimpi yang belum kesampaian. Musik saya banyak dipengaruhi oleh rock alternatif, blues, dan suara mentah penuh energi ala Kelompok Penerbang Roket. Tapi saya juga senang mengeksplorasi nuansa yang lebih syahdu, minimalis, bahkan eksperimental.
+        <br><br>
+        Saat ini saya aktif menciptakan lagu untuk proyek pribadi, scoring film pendek, dan berbagai bentuk kolaborasi kreatif. Bagi saya, yang paling penting adalah karya itu terasa nyata — bukan hanya enak didengar, tapi juga punya rasa.
+        <br><br>
+        Kalau kamu tertarik bekerja sama, atau cuma ingin ngobrol soal musik, jangan ragu hubungi saya.
+        <br>Let’s create something honest and loud.
       </div>
-  </div>
-        </article>
-    </main>
-    </body>
-    
+
+      <p style="margin-top: 20px;">Jika ingin mengenal lebih dalam silakan klik sosial media saya:</p>
+      <div class="sosmed">
+        <a href="https://instagram.com/wildanmalicky/" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: contain;">
+        </a>
+        <a href="https://facebook.com/" target="_blank">
+          <img src="images/facebook.png" alt="Facebook" style="width: 30px; height: 30px; object-fit: contain;">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AWA Team. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTranslate() {
+      var x = document.getElementById("translation");
+      x.style.display = x.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
 </html>
-  </div>
-</section>
-<?php include 'footer.php'; ?>

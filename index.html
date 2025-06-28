@@ -1,63 +1,93 @@
-<?php include 'header.php'; ?>
-<section class="hero">
-  <div class="container">
-    <h4> Transforming Ideas into Digital Reality</h4>
-    <h1>When Three Minds Become One Vision 
-    <p>Kami adalah tiga individu dengan semangat dan visi yang sama.
-Bersama, kami menciptakan solusi, inovasi, dan karya yang bermakna..</p>
-    <div class="buttons">
-      <a href="#services" class="btn-primary">Explore More</a>
-      <a href="website.php" class="btn-outline">View All Product</a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWA Team | Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header langsung dari header.php -->
+  <header>
+    <div class="container">
+      <h1>AWA Creative Team</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="website.html">Product</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="about">
-  <div class="container">
-    <div class="about-text">
-      <h4>// Detail Kami</h4>
-      <h2>Mewakili Kolaborasi, Visi, dan Dampak</h2>
-      <p>Logo AWA mencerminkan tiga sosok yang saling terhubung, melambangkan sinergi dari tiga pendiri kami: Apriyanto, Muhammad Wildan,dan Abid Faturrahman.</p>
-      <p>Setiap garis yang membentuk ikon menyimbolkan peran unik dan kontribusi mereka:</p>
-      <ul>
-        <li><strong>Apriyanto</strong> – Technical Specialist, penggerak solusi teknologi.</li>
-        <li><strong>Abid Faturrahman</strong> – Entrepreneur, pengarah visi dan bisnis.</li>
-        <li><strong>Muhammad Wildan</strong> – Composer, kreator ide dan identitas artistik.</li>
-      </ul>
-      <p>Dengan semangat <em>"Together, We Create Impact"</em>, AWA berkomitmen untuk memberikan solusi digital yang tidak hanya fungsional, tapi juga bermakna.</p>
-
-      <ul class="stats">
-        <li><strong>150+</strong> Team Members</li>
-        <li><strong>2000+</strong> Happy Clients</li>
-        <li><strong>99%</strong> Client Satisfaction</li>
-      </ul>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h4>Transforming Ideas into Digital Reality</h4>
+      <h1>When Three Minds Become One Vision</h1>
+      <p>Kami adalah tiga individu dengan semangat dan visi yang sama. Bersama, kami menciptakan solusi, inovasi, dan karya yang bermakna..</p>
+      <div class="buttons">
+        <a href="#services" class="btn-primary">Explore More</a>
+        <a href="website.html" class="btn-outline">View All Product</a>
+      </div>
     </div>
-    <div class="about-img">
-      <img src="images/WhatsApp Image 2025-06-22 at 11.43.15_b2492e8d.jpg" alt="Team">
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-text">
+        <h4>// Detail Kami</h4>
+        <h2>Mewakili Kolaborasi, Visi, dan Dampak</h2>
+        <p>Logo AWA mencerminkan tiga sosok yang saling terhubung, melambangkan sinergi dari tiga pendiri kami: Apriyanto, Muhammad Wildan, dan Abid Faturrahman.</p>
+        <p>Setiap garis yang membentuk ikon menyimbolkan peran unik dan kontribusi mereka:</p>
+        <ul>
+          <li><strong>Apriyanto</strong> – Technical Specialist, penggerak solusi teknologi.</li>
+          <li><strong>Abid Faturrahman</strong> – Entrepreneur, pengarah visi dan bisnis.</li>
+          <li><strong>Muhammad Wildan</strong> – Composer, kreator ide dan identitas artistik.</li>
+        </ul>
+        <p>Dengan semangat <em>"Together, We Create Impact"</em>, AWA berkomitmen untuk memberikan solusi digital yang tidak hanya fungsional, tapi juga bermakna.</p>
+
+        <ul class="stats">
+          <li><strong>150+</strong> Team Members</li>
+          <li><strong>2000+</strong> Happy Clients</li>
+          <li><strong>99%</strong> Client Satisfaction</li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="images/WhatsApp Image 2025-06-22 at 11.43.15_b2492e8d.jpg" alt="Team">
+      </div>
     </div>
-  </div>
-</section>
-<script>
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  </section>
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // aktifkan tombol yang diklik
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+  <!-- Script -->
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-      const filter = button.getAttribute('data-filter');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-      projectCards.forEach(card => {
-        if (filter === 'all' || card.classList.contains(filter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        const filter = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
 
-<?php include 'footer.php'; ?>
+  <!-- Footer langsung dari footer.php -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AWA Team. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
